@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
@@ -8,7 +7,7 @@ import {
   PhonebookFormButton,
   PhonebookFormLabel,
   PhonebookFormInput,
-} from './Phonebook.styled';
+} from '../Phonebook.styled';
 
 export const ContactForm = ({ onChangeContacts }) => {
   const defaultName = '';

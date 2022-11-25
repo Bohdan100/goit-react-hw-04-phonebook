@@ -1,5 +1,6 @@
 import { Global, css } from '@emotion/react';
-import 'normalize.css';
+import 'modern-normalize';
+// npm i modern-normalize
 
 export const GlobalStyle = () => (
   <Global

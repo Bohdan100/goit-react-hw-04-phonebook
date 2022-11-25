@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { ContactsList } from './Phonebook.styled';
+import { ContactsList } from '../Phonebook.styled';
 import ContactsItem from './ContactsItem';
 
 export const Contacts = ({ filteredContacts, onDeleteContact }) => (

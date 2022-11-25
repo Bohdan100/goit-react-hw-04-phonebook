@@ -67,8 +67,8 @@ export const PhonebookForm = styled.form`
   padding: 20px;
   display: flex;
   flex-direction: column;
-  border: ${props => props.theme.borders.normal}
-    ${props => props.theme.colors.green};
+  border: ${props => props.theme.borders.normal};
+  border-color: ${props => props.theme.colors.green};
   border-radius: ${props => props.theme.radius.normal};
 `;
 

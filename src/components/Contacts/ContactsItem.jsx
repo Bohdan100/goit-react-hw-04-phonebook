@@ -5,7 +5,7 @@ import {
   ContactsListItem,
   ContactsListText,
   ContactsButtonDelete,
-} from './Phonebook.styled';
+} from '../Phonebook.styled';
 
 const ContactsItem = ({ id, name, number, onDeleteContact }) => (
   <ContactsListItem>
