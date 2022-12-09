@@ -7,6 +7,7 @@ import shortid from 'shortid';
 import { ContactForm } from './ContactForm';
 import { Contacts } from './Contacts';
 import { Filter } from './Filter';
+import { getFromLocalStorage, changeLocalStorage } from 'functions';
 import { PhonebookTitle, ContactsTitle } from './Phonebook.styled';
 
 export const Phonebook = () => {
@@ -16,21 +17,11 @@ export const Phonebook = () => {
     { id: 'id-3', name: 'Eden Clements', number: '645-17-79' },
     { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
   ];
-  const defaulFilter = '';
-
-  const getFromLocalStorage = (key, defaultValue) => {
-    return JSON.parse(window.localStorage.getItem(key)) ?? defaultValue;
-  };
-  const changeLocalStorage = (key, state) => {
-    window.localStorage.setItem(key, JSON.stringify(state));
-  };
 
   const [contacts, setContacts] = useState(
     getFromLocalStorage('contacts', defaultContacts)
   );
-  const [filter, setFilter] = useState(
-    getFromLocalStorage('filter', defaulFilter)
-  );
+  const [filter, setFilter] = useState('');
 
   const changeContacts = newContact => {
     const errorArray = contacts.filter(
